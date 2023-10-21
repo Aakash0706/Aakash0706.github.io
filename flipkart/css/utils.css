@@ -1,0 +1,27 @@
+/* unsplash images https://source.unsplash.com/1600x1600/?cricket */
+.flex-all-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.btn{
+    /* background-color: red; */
+    border: white;
+    cursor: pointer;
+    font-weight: bold;
+    height: 0px;
+    margin-bottom: 27px;
+}
+
+.my-1{
+    margin: 5px 0;
+}
+.my-2{
+    margin: 26px 0;
+}
+
+.text-center{
+    text-align: center;
+}

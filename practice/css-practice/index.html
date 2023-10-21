@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MY FIRST CSS</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto+Mono:wght@200&family=Tilt+Neon&display=swap');
+
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    body {
+      height: 100vh;
+    }
+
+    .flex-nav {
+      height: 15vh;
+      width: 100vw;
+      background-color: whitesmoke;
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
+      position: fixed;
+      display: flex;
+      align-items: center;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .flex-nav ul {
+      display: flex;
+    }
+
+    .flex-nav ul li {
+      list-style-type: none;
+      margin: 5px 20px;
+      color: rgb(75, 74, 74);
+    }
+
+    .flex-nav ul li:hover {
+      cursor: pointer;
+    }
+
+    .flex-nav #search {
+      width: 20vw;
+      height: 34px;
+      cursor: text;
+      background-color: whitesmoke;
+      font-size: large;
+      margin-left: 23vw;
+      border: none;
+      outline: none;
+      border-bottom: 2px solid silver;
+    }
+
+    .icon {
+      position: relative;
+      left: -2vw;
+    }
+
+    .UGHfip {
+      border-right: 2px solid silver;
+      position: sticky;
+    }
+
+    .flex-nav #follow {
+      text-decoration: none;
+      margin-left: 16px;
+      border-radius: 25px;
+      height: 44px;
+      width: 10vw;
+      cursor: pointer;
+      font-size: 17px;
+    }
+
+    .flex-nav #follow:hover {
+      color: white;
+      transition: 0.3s ease;
+      background-color: black;
+    }
+
+    .nav2 {
+      padding-top: 30vh;
+    }
+
+    .content {
+      display: flex;
+      height: 500px;
+      width: 90%;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .row1 {
+      height: 490px;
+      width: 50%;
+    }
+
+    .font p {
+      margin-top: 25px;
+      font-family: 'Roboto Mono', monospace;
+      font-weight: bolder;
+    }
+
+    .font h1 {
+      margin-top: 25px;
+      width: 400px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .font .p1 {
+      margin-top: 25px;
+      width: 400px;
+      font-family: 'Tilt Neon', sans-serif;
+      font-size: larger;
+    }
+
+    .row2 {
+      height: 490px;
+      width: 50%;
+      background-image: url('https://static.wixstatic.com/media/4a5235_9b64ac74e62b4cfe9f5a9ae906b7134b~mv2.png/v1/fill/w_595,h_505,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/4a5235_9b64ac74e62b4cfe9f5a9ae906b7134b~mv2.png');
+
+    }
+    .flex-nav ul li a{
+      text-decoration: none;
+      color: rgb(75, 74, 74);
+    }
+/* -------------------------------------------------------------------------------------- */
+    /* .nav-bar{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        position: relative;
+        padding: 12px 20px;
+        background-color: pink;
+      } */
+      /* .logo img {width: 40px;} */
+      .menu {
+        display: flex;
+      }
+      /* .menu li {padding-left: 30px;} */
+      .menu li a{
+        display:inline-block;
+        text-decoration: none;
+        list-style-type: none;
+        text-align: center;
+        transition:0.15s ease-in-out;
+        position: relative;
+        text-transform: uppercase;
+        color:aliceblue;
+        cursor:default;
+      }
+      /* .menu li a::after{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        transition: 0.15s ease-in-out;
+      } */
+      /* .menu li a:hover:after{width: 100%;} */
+      .open-menu , .close-menu {
+        position: absolute;
+        cursor: pointer;
+        font-size: 1.5rem; 
+        display: none;
+      }
+      .open-menu{
+        top: 5%;
+        right: 20px; 
+        transform: translateY(-50%);
+      }
+      .close-menu{
+        color: aliceblue;
+        top: 20px;
+        right: 20px;
+      }
+
+      #check {
+      display: none;
+      }
+
+
+    /* Media query for smaller screens (e.g., tablets) */
+    @media (max-width: 480px) {
+      .flex-nav {
+        height: 9vh;
+        width: 100vw;
+        background-color: whitesmoke;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
+        position: fixed;
+        display: flex;
+        align-items: center;
+        font-family: 'Poppins', sans-serif;
+      }
+
+      .flex-nav #search {
+        width: 50vw;
+        height: 34px;
+        cursor: text;
+        position: absolute;
+        left: 0;
+        background-color: whitesmoke;
+        font-size: large;
+        margin-left: 23vw;
+        border: none;
+        outline: none;
+        border-bottom: 2px solid silver;
+      }
+
+      .icon {
+        position: relative;
+        left: -27vw;
+      }
+
+      .UGHfip {
+        border-right: 2px solid silver;
+        position: sticky;
+      }
+
+      .flex-nav #follow {
+        visibility: hidden;
+        text-decoration: none;
+        margin-left: 16px;
+        border-radius: 25px;
+        height: 44px;
+        width: 10vw;
+        cursor: pointer;
+        font-size: 17px;
+      }
+
+      .flex-nav #follow:hover {
+        visibility: hidden;
+        color: white;
+        transition: 0.3s ease;
+        background-color: black;
+      }
+
+      .flex-nav ul {
+        visibility: hidden;
+        display: flex;
+      }
+
+      .flex-nav ul li {
+        visibility: hidden;
+        list-style-type: none;
+        margin: 5px 20px;
+        color: rgb(75, 74, 74);
+      }
+
+      .flex-nav ul li:hover {
+        visibility: hidden;
+        cursor: pointer;
+      }
+
+
+      .nav2 {
+        padding-top: 4vh;
+      }
+
+      .content {
+        display: flex;
+        flex-direction: column;
+        height: 1000px;
+        width: 90%;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+
+      .row1 {
+        height: 380px;
+        width: 100%;
+        /* border: 2px dotted red; */
+      }
+
+      .row2 {
+        /* border: 2px dotted red; */
+        height: 300px;
+        width: 100%;
+        background-image: url('https://static.wixstatic.com/media/4a5235_9b64ac74e62b4cfe9f5a9ae906b7134b~mv2.png/v1/fill/w_595,h_505,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/4a5235_9b64ac74e62b4cfe9f5a9ae906b7134b~mv2.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+
+      .font p {
+        margin-top: 25px;
+        font-family: 'Roboto Mono', monospace;
+        font-weight: bolder;
+      }
+
+      .font h1 {
+        margin-top: 25px;
+        width: 340px;
+        font-family: 'Poppins', sans-serif;
+      }
+
+      .font .p1 {
+        margin-top: 25px;
+        width: 326px;
+        font-family: 'Tilt Neon', sans-serif;
+        font-size: larger;
+      }
+      /* -------------------------------------------------------------------------------- */
+
+      .menu{
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 80%;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      right: -100%;
+      z-index: 100;
+      /* background-color: whitesmoke; */
+      background-color:rgba(34, 34, 33, 0.959);
+      transition: all 0.2s ease-in-out;
+    }
+    .menu li{margin-top: 40px;}
+    .menu li a{padding: 10px;}
+    .open-menu, .close-menu {display:block;}
+    #check:checked ~ .menu{right: 0;}
+    }
+
+    .menu li{
+        list-style-type: none;
+        font-family: 'Tilt Neon', sans-serif;
+        cursor: pointer;
+      }
+    .menu li a:hover{
+        color: aqua;
+      }
+
+      @import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+
+      .menu .social a{
+        /* color: rgb(255, 251, 1); */
+        margin-right: 20px;
+        margin-bottom: -40px;
+        display: flex;
+        align-items: flex-start;
+        width: 250px;
+        font-size: smaller;
+        font-family: 'Inconsolata', monospace;
+      }
+    /* Media query for even smaller screens (e.g., mobile phones) */
+    @media (max-width: 912px) {}
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <nav class="flex-nav">
+      <ul>
+        <li><a href="#">Categories</a></li>
+        <li><a href="#">Resources</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+      <input type="search" name="search" id="search" placeholder="Search...">
+      <div class="UGHfip wixui-vertical-line"><i class="fa-solid icon fa-magnifying-glass"></i></div>
+      <input type="button" value="Follow" id="follow">
+    </nav>
+    <nav>
+      <ul class="nav-bar">
+        <input type="checkbox" id="check">
+        <span class="menu">
+          <li><a href="#">Categories</a></li>
+          <li><a href="#">Resources</a></li>
+          <li><a href="index.html">About</a></li>
+          <li class="social" id="aa"><a href="https://www.instagram.com/realakashjaiswal/">Instagram</a></li>
+          <li class="social"><a href="https://www.linkedin.com/in/akash-jaiswal-0b9930248/">LinkedIn</a></li>
+          <li class="social"><a href="https://www.youtube.com/channel/UC6BYHkjNY1jhKlaWvlmhF7A">YouTube</a></li>
+          <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+        </span>
+        <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+      </ul>
+    </nav>
+    <div class="nav2"></div>
+    <div class="content">
+      <div class="row1">
+        <div class="font">
+          <p>WEBSITE ESSENTIALS</p>
+          <h1>How to build a website from scratch in 11 steps (for beginners)</h1>
+          <p class="p1">A strong online presence is essential for any business. Here's how to build a website from
+            scratch.</p>
+        </div>
+      </div>
+      <div class="row2">
+        <div></div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="https://kit.fontawesome.com/c7dc05ddb8.js" crossorigin="anonymous"></script>
+<script>
+  let searching = document.getElementById('search');
+  let search_icons = document.getElementsByClassName('icon');
+  let check = document.getElementById('ckeck');
+
+  searching.addEventListener('click', (event) => {
+    if (search_icons.length > 0) {
+      // Access the first element with class 'icon'
+      search_icons[0].style.opacity = 0;
+    }
+    // Prevent the click event from propagating to the body click event
+    event.stopPropagation();
+  });
+
+  document.body.addEventListener('click', () => {
+    if (search_icons.length > 0) {
+      // Access the first element with class 'icon'
+      search_icons[0].style.opacity = 1;
+    }
+  });
+</script>
+
+</html>

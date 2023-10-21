@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- heading & paragraphs -->
+    <h1>THIS IS MY PAGE</h1>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <hr>
+    <!-- Example of absolute link -->
+    <a href="https://www.instagram.com/realakashjaiswal/">click on this link to visit my instagram</a></br>
+    <hr>
+    <!-- Example of relative link -->
+    <a href="/about.html">click here to visit my about</a><br>
+    <hr>
+    <!-- image tag -->
+    <img src="https://cdn.pixabay.com/photo/2015/06/19/21/24/avenue-815297_960_720.jpg " alt="kaam nahi kr raha baad mai ana" width="1350">
+    <img src="/image.jfif" alt="kya dekh raha h" width="1350">
+    <hr>
+    <!-- bold italic underline -->
+    <br><b>this is bold</b><br>
+    <i>this is italic</i><br>
+    <u>this is underline</u><br>
+    <hr>
+    <!-- big or small  -->
+    <big>this is big</big><br>
+    <small>this is small</small>
+    <hr>
+    <!-- subscript and superscript  -->
+    <p>H<sub>2</sub>O</p>
+    <p>A<sup>2</sup>+2ab+b<sup>2</sup></p>
+    <!-- pre tag to print as it is  -->
+    <pre>
+        <p>#include&lt;stdio.h&gt;    
+            #include&lt;stdlib.h&gt;  
+            int main(){  
+            int a[10][10],b[10][10],mul[10][10],r,c,i,j,k;    
+            system("cls");  
+            printf("enter the number of row=");    
+            scanf("%d",&r);    
+            printf("enter the number of column=");    
+            scanf("%d",&c);    
+            printf("enter the first matrix element=\n");    
+            for(i=0;i&lt;r;i++)    
+            {    
+            for(j=0;j&lt;c;j++)    
+            {    
+            scanf("%d",&a[i][j]);    
+            }    
+            }    
+            printf("enter the second matrix element=\n");    
+            for(i=0;i&lt;r;i++)    
+            {    
+            for(j=0;j&lt;c;j++)    
+            {    
+            scanf("%d",&b[i][j]);    
+            }    
+            }    
+                
+            printf("multiply of the matrix=\n");    
+            for(i=0;i&lt;r;i++)    
+            {    
+            for(j=0;j&lt;c;j++)    
+            {    
+            mul[i][j]=0;    
+            for(k=0;k&lt;c;k++)    
+            {    
+            mul[i][j]+=a[i][k]*b[k][j];    
+            }    
+            }    
+            }    
+            //for printing result    
+            for(i=0;i&lt;r;i++)    
+            {    
+            for(j=0;j&lt;c;j++)    
+            {    
+            printf("%d\t",mul[i][j]);    
+            }    
+            printf("\n");    
+            }    
+            return 0;  
+            }  
+        </p>
+    </pre>
+    
+
+
+</body>
+</html>

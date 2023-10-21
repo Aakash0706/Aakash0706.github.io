@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,700&display=swap" rel="stylesheet">
+    <title>Contact Details for Delivery</title>
+    <style>
+        * {
+            padding: 0%;
+            margin: 0%;
+        }
+
+        .container {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            /* background-color: red; */
+        }
+
+        .column1 {
+            height: 20%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Roboto', sans-serif;
+            /* background-color: aliceblue; */
+        }
+
+        .column2 {
+            height: 80%;
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+            align-items: center;
+        }
+        .style
+        {
+            margin: 15px 0px 15px 0px;
+            padding: 7px;
+            /* background-color: aquamarine; */
+        }
+        .spacing
+        {
+            padding: 8px;
+            width: 300px;
+            margin-left: 50px;
+            border-radius: 5px;
+        }
+        .spacing1
+        {
+            padding: 8px;
+            width: 300px;
+            margin-left: 41px;
+            border-radius: 5px;
+        }
+        .spacing2
+        {
+            padding: 8px;
+            width: 300px;
+            margin-left: 57px;
+            border-radius: 5px;
+        }
+        .spacing3
+        {
+            padding: 8px;
+            width: 300px;
+            margin-left: 62px;
+            border-radius: 5px; 
+        }
+        .spacing4
+        {
+             margin-left: 40px;
+        }
+        .spacing5
+        {
+             width: 167px; 
+             margin-right: 158px;
+        }
+        .spacing6
+        {
+            margin-right: 20px;
+        }
+        .spacing7
+        {
+            margin-left: 90px;
+        }
+        .spacing8{
+            height: 60px;
+            width: 420px;
+            background-color: orange;
+        }
+    
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="column1">
+            <h1><b> <u>CONTACT DETAILS FOR DELIVERY</u></b></h1>
+        </div>
+        <div class="column2">
+
+            <label class="style">
+                <span>Name:</span><input class="spacing" type="text" placeholder="Enter Your Name">
+            </label>
+            <label class="style">
+                <span>Phone#:</span><input class="spacing1" type="text" placeholder="Enter Your Number">
+            </label>
+            <label class="style">
+                <span>State:</span><input class="spacing2" type="text" placeholder="Enter Your State">
+            </label>
+            <label class="style">
+                <span>City:</span><input class="spacing3" type="text" placeholder="Enter Your City">
+            </label>
+            <div class="style">
+                <label for="deliveryid1" >
+                    <span>Delivery: </span><input class="spacing4" type="radio" value="1 day" name="delivery" id="deliveryid1"><span class="spacing6"> 1 Day</span>
+                </label>
+                <label for="deliveryid2">
+                    <input type="radio" value="standard" name="delivery" id="deliveryid2"><span class="spacing5"> Standard</span>
+                </label>
+            </div>
+            <label class="style">
+                <Span class="abc">Full Address: </Span><textarea class="spacing7" name="address" cols="30" rows="5" placeholder="Type your address"></textarea>
+            </label>   
+            <!-- <label class="spacing8">
+                <input type="submit">           
+            </label> -->
+            <a href="thanku.html"> <input class="spacing8" type="submit" id="Submit" value="Place Order"/></a>
+           
+        </div>
+
+    </div>
+</body>
+
+</html>

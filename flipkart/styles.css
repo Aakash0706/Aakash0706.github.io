@@ -1,0 +1,27 @@
+.{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+.navbar
+{
+    background-color: #287FF0;
+    height: 60px;
+    min-width: 124px;
+    
+    box-sizing: border-box;
+    margin: -10px;
+}
+.logo
+{
+    display: flex;
+    justify-content: center;
+    padding:1%;
+}
+.textbox
+{
+    display: flex;
+    justify-content: center;
+    padding:1%; 
+}

@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Kristi&family=Manrope:wght@300&family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Kristi&family=Manrope:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: antiquewhite;
+}
+
+nav {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    height: 65px;
+    background-color: black;
+    color: white;
+}
+
+nav ul li {
+    padding: 0 12px;
+}
+
+.brand img {
+    width: 44px;
+    padding: 0 8px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 1.3rem;
+}
+
+.container {
+    min-height: 55vh;
+    background-color: black;
+    color: white;
+    font-family: 'Varela Round', sans-serif;
+    display: flex;
+    width: 75%;
+    margin: 23px auto;
+    border-radius: 12px;
+    padding: 34px;
+    background-image: url('https://c4.wallpaperflare.com/wallpaper/738/744/882/music-vinyl-simple-background-minimalism-wallpaper-preview.jpg');
+}
+
+.bottom {
+    position: sticky;
+    height: 91px;
+    background-color: black;
+    color: white;
+    bottom: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.fa-solid{
+    color: rgb(187, 175, 175);
+}
+
+.fa-solid:hover{
+    color: white;
+}
+
+#masterPlay:hover{
+    transform: scale(1.07);
+}
+
+.icons {
+    margin-bottom: 14px;
+}
+
+.icons i {
+    margin: 0px 14px 0 14px;
+    cursor: pointer;
+}
+
+#myProgressBar {
+    /* -webkit-appearance: none; */
+    width: 33vw;
+    height: 4px;
+    border-radius: 100px;
+    background: rgb(56, 56, 56);
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer;
+}
+#myProgressBar::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 1px;
+    height: 12px;
+    border-radius: 50px;
+    box-shadow: -400px 0 0 400px #d5eebb;
+
+}
+
+.songItemContainer {
+    margin-top: 20px;
+    height: 300px;
+    overflow-y: auto;
+}
+
+/* Hide the vertical scrollbar */
+::-webkit-scrollbar {
+    width: 0.5em;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0);
+    /* Make the thumb transparent */
+}
+
+
+.songItem {
+
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: fit-content;
+    width: 100%;
+    background: grey;
+    color: black;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.text-class {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.songItem span {
+    color: white;
+    margin: 0 15px;
+}
+
+.songItem img {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.songInfo {
+    position: absolute;
+    left: 1vw;
+    font-family: 'Varela Round', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.songInfo i {
+    margin-left:8px;
+    cursor: pointer;
+}
+.banner-heart{
+    /* position: relative; */
+    /* display: block; */
+    margin-left: 420px;
+    cursor: pointer;
+}
+/* .banner{
+    /* background-color: green; 
+} */
+
+.songInfo i:hover {
+    color: brown;
+}
+
+.mygif{
+    opacity: 0;
+    transition: opacity 0.3s ease-in;
+    height: 40px;
+    width: 100px;
+    margin-left: 19px;
+}
+
+.songlistplay i {
+    margin-right: 5px;
+}
+
+.songBanner{
+    position: relative;
+    display: block;
+    width: 280px;
+    height: 280px;
+    margin-left: 410px;
+    border-radius: 8px;
+    background-image: url('https://i.scdn.co/image/ab67616d0000b273e2e352d89826aef6dbd5ff8f');
+    background-size: cover;
+    /* box-shadow: 0 0 0 2px rgba(225, 225, 225, 0.08); */
+}
+
+.masterSongIcon{
+    position: relative;
+    display: block;
+    height: 55px;
+    width: 55px;
+    margin-right: 20px;
+    border-radius: 4px;
+    background-image: url('https://i.scdn.co/image/ab67616d0000b273e2e352d89826aef6dbd5ff8f');
+    background-size: cover;
+    /* box-shadow: 0 0 0 2px rgba(225, 225, 225, 0.08); */
+}  
+
+.current-time, 
+.song-duration{
+    font-size: 11px;
+    margin-top: 45px;
+    position: absolute;
+    color: rgb(165, 154, 154);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    cursor: context-menu;
+}
+
+.song-duration{
+    right: 30.5vw;
+}
+
+.current-time{
+    left: 30.5vw;
+}
+
+#bannerSongName{
+    /* position: relative; */
+    display: block;
+    margin-left: 450px;
+    margin-top: 12px;
+    font-size: larger;
+    font-weight: bolder;
+}

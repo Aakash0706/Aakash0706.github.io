@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0%;
+            margin: 0%;
+        }
+        .container
+        {
+            height: 300px;
+            width: 500px;
+            background-color: aqua;
+            border: 2px solid black;
+        }
+
+        img{
+            width: 280px;
+            transition-duration: 1s;
+            transition-timing-function: ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <img id="image" src="395786.jpg" alt="vnngn">
+            <button id="btn">Hover</button>
+        </div>
+    </div>
+</body>
+<script>
+    image.style.width="280px";
+    btn.addEventListener('click', ()=>{
+        if(image.style.width==="280px"){
+            image.style.width="45px";   
+        }
+        else if(image.style.width==="45px"){
+            image.style.width="280px";
+        }
+    });
+</script>
+</html>

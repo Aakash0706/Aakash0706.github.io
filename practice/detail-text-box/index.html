@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Details</title>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<head>
+    <style>
+        .row {
+            display: flex;
+            flex-direction: column;
+            width: 500px;
+            margin: 10px;
+            padding: 5px;
+            justify-content: space-between;
+            align-items: center;
+            height: 350px;
+            border: 1px;
+            /* background-color: rgb(255, 8, 8);  */
+        }
+
+        button{
+            width:50px;
+        } 
+        span, label   {
+            /* color:white ;  */
+        }      
+        .container{
+            /* background-color: dodgerblue;  */
+            display: flex;
+            height: 600px;
+            justify-content: center;
+            align-items: center;
+        }  
+        .solid {border-style:solid;}                                                                                                                 
+        
+    </style>
+
+    <script>
+        function nameinput() {
+            var firstName = document.getElementById('firstName').value;
+            var secondName = document.getElementById('secondName').value;
+            var phoneNum = document.getElementById('phoneNum').value;
+            var address = document.getElementById('address').value;
+            var result = firstName + ' ' + secondName;
+            document.getElementById('spanid').textContent = result;
+            document.getElementById('Number').textContent = phoneNum;
+            document.getElementById('inputaddress').textContent = address;
+        }
+    </script>
+
+</head>
+
+<body>
+    <div class="container">
+    <div class="row solid">
+        
+        <label style="margin-top: 20px;">Enter First Name : <input type="text" id="firstName" placeholder="First Name"></label>
+        <label>Enter Last Name: <input type="text" id="secondName" placeholder="SecondName"></label>
+        <label>Enter Your Number<input type="text" id="phoneNum" placeholder="Enter Your Number"></label>
+        <label>Enter Your Address <input type="text" id="address" placeholder="Enter Your Address"></label>
+        <button onClick="nameinput()">Enter</button>
+
+        <span id="spanid"></span>
+        <span id="Number"></span>
+        <span id="inputaddress"></span>
+    </div></div>                                                                                                                                                                                                                         
+</body>
+
+</html>
