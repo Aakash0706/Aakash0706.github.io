@@ -329,7 +329,7 @@ body {
     .flex-nav #search{
         display: none;
         width: 50vw;
-        height: 34px;
+        height: 34px; 
         cursor: text;
         position: absolute;
         left: 0;
