@@ -18,14 +18,6 @@ document.body.addEventListener('click', () => {
 });
 
 window.onload = function () {
-    window.addEventListener('scroll', function (e) {
-        if (window.pageYOffset > 100) {
-            document.querySelector("header").classList.add('is-scrolling');
-        }
-        else {
-            document.querySelector("header").classList.add('is-scrolling');
-        }
-    });
     const menu_btn = document.querySelector('.hamburger');
     const mobile_menu = document.querySelector('.mobile-nav');
     const search_bar = document.getElementById('search');
@@ -35,3 +27,35 @@ window.onload = function () {
         search_bar.style.zIndex = -1;
     });
 }
+
+const darkMode = document.getElementById('dark');
+const flex_nav = document.getElementsByClassName('flex-nav');
+
+darkMode.addEventListener('click',()=>{
+    document.body.classList.add("body-clr");
+
+    for (const element of flex_nav) {
+        element.classList.add("nav-clr");
+    }
+});
+
+const navBar = document.querySelector('.flex-nav');
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 0) {
+        navBar.classList.add("scroll-shadow");
+    } else {
+        navBar.classList.remove("scroll-shadow");
+    }
+});
+
+
+
+const lightMode = document.getElementById('light');
+lightMode.addEventListener('click',()=>{
+    document.body.classList.remove("body-clr");
+    for (const element of flex_nav) {
+        element.classList.remove("nav-clr");
+    }
+});
+

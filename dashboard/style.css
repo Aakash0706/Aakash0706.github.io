@@ -9,6 +9,7 @@
 
 body {
     height: 100vh;
+    
 }
 
 .flex-nav {
@@ -110,6 +111,7 @@ body {
 }
 
 .font .p1 {
+    word-spacing: 1vw;
     margin-top: 25px;
     width: 400px;
     font-family: 'Tilt Neon', sans-serif;
@@ -150,7 +152,8 @@ body {
     display: block;
     width: 80%;
     height: 3px;
-    background-color: rgb(2, 2, 2);
+    /* background-color: rgb(2, 2, 2); */
+    background-color: rgb(255, 255, 255);
     margin: 6px 0px;
     transition: 0.4s;
 }
@@ -208,14 +211,74 @@ body {
     list-style-type: none;
 }
 
-/* .side-bar{
-    margin-left: 120px;
-    visibility: visible;
-  } */
+.side-bar{
+    display: flex;
 
-@media(min-width: 768px) {
-    /* hamburger */
-    /* ------------------------------------------------------------------------ */
+}
+.side-bar .logo{
+    display: inline-block;
+    position: relative;
+    left: -90vw;
+    width: 3px;
+    cursor: pointer;
+  }
+  .side-bar .logo img{
+    height: 50px;
+    margin-top: 12px;
+
+  }
+  .dropdown{
+    display: flex;
+    justify-content: center;
+    height: 50px;
+  }
+
+  .dropdown button{
+    background-color: aliceblue;
+    width: 233px;
+    padding: 10px 15px;
+    border: none;
+    font-size: large;
+    cursor: pointer;
+}
+.dropdown button:hover{
+    background-color: cadetblue;
+    /* color: white; */
+}
+.dropdown a{
+    display: block;
+    color: rgb(255, 255, 255);
+    background-color: #12002fb0;
+    text-decoration: none;
+    padding: 10px 15px;
+    margin-top: 1.3em;
+}
+.dropdown .content{
+    display: none;
+    position:absolute;
+    margin-top: 55px;
+    background-color: #ffffffe7;
+    width: 260px;
+    border-radius: 9px;
+    height: 150px;
+
+}
+.dropdown:hover .content{
+    display: block;
+}
+#dark:hover{
+    background-color: black;
+}
+#light:hover{
+    background-color: rgb(238, 228, 228);
+    color: black;
+    border: 2px solid black;
+}
+
+
+/* hamburger */
+/* ------------------------------------------------------------------------ */
+@media(min-width: 480px) {
 
     .mobile-nav {
         display: none;
@@ -227,34 +290,60 @@ body {
 }
 
 /* --------------------------------------------------------------------------------------------------- */
+/* @media(min-width: 480px) {
+    .font p {
+        margin-top: 25px;
+        font-family: 'Roboto Mono', monospace;
+        font-weight: bolder;
+    }
+
+    .font h1 {
+        margin-top: 25px;
+        width: 320px;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .font .p1 {
+        margin-top: 25px;
+        width: 320px;
+        font-family: 'Tilt Neon', sans-serif;
+        font-size: larger;
+    }
+} */
+/* ------------------------------------------------------------------------------------------------------- */
 @media(max-width: 480px) {
 
     .flex-nav {
         height: 9vh;
         width: 100vw;
-        background-color: whitesmoke;
-        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
+        background-color: #6e2cf3f8;
+        /* background-color: #DEE2E6; */
+        transition: box-shadow 0.7s; 
+        box-shadow: 2px 2px 100px rgb(179, 194, 158);
         position: fixed;
         display: flex;
         align-items: center;
         font-family: 'Poppins', sans-serif;
     }
 
-    .flex-nav #search {
+    .flex-nav #search{
+        display: none;
         width: 50vw;
         height: 34px;
         cursor: text;
         position: absolute;
         left: 0;
-        background-color: whitesmoke;
         font-size: large;
         margin-left: 23vw;
         border: none;
         outline: none;
         border-bottom: 2px solid silver;
+        /* background-color: rgba(138, 87, 233, 0.966); */
+        /* background-color: #DEE2E6; */
     }
 
     .icon {
+        visibility: hidden;
         position: relative;
         left: -45vw;
     }
@@ -333,6 +422,23 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
+
+    }
+    .body-clr{
+        /* background-color: #DEE2E6; */
+        background-color: rgba(33,37,41,255);
+        color: white;
+    }
+    .nav-clr{
+        /* background-color: #DEE2E6; */
+        /* background-color: rgb(56, 61, 59); */
+        /* background-color: rgba(33,36,41,0.9); */
+        /* background-color: rgba(33,36,41,1); */
+        /* color: white; */
+        box-shadow: 2px 2px 100px rgb(179, 194, 158);
+    }
+    .scroll-shadow{
+        box-shadow: 2px 2px 9px rgb(179, 194, 158);
     }
 
 
@@ -350,10 +456,10 @@ body {
 
     .font .p1 {
         margin-top: 25px;
+        word-spacing: 2vw;
         width: 326px;
         font-family: 'Tilt Neon', sans-serif;
         font-size: larger;
     }
-
-
 }
+
